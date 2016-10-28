@@ -4,8 +4,8 @@ return [
 	'db_host' 	=>	'127.0.0.1',
 	'db_user' 	=>	'root',
 	'db_pwd' 	=>	'',
-	'db_name' 	=>	'labframe',
-	'db_table_prefix' 	=>	'lab_',
+	'db_name' 	=>	'mos',
+	'db_table_prefix' 	=>	'mos_',
 	'db_charset' 	=>	'utf8',
 
     'default_module'    => 'home',
@@ -23,7 +23,7 @@ return [
     // 模板后缀
     'view_suffix'  => '.php',
 
-    'auto_cache' 	=> true,
+    'auto_cache' 	=> false,
     // URL伪静态后缀
     'url_html_suffix'        => 'html',
 

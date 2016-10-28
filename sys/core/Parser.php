@@ -17,15 +17,15 @@ class Parser
 
 	private function parVar()
 	{
-		$patter = '/\{\$([\w]+)\}/';
+		$patter = '/\{\$([\w]+)(\[\'([\w]*)\'\])*\}/';
 		$repVar = preg_match($patter,$this->content);
 		if ($repVar) {
-			$this->content = preg_replace($patter,"<?php echo \$this->vars['$1']; ?>",$this->content);
+			$this->content = preg_replace($patter,"<?php echo \$this->vars['$1']$2; ?>",$this->content);
 		}
 	}
 
 	public function compile($parser_file){
-		$this->parVar();
+		//$this->parVar();
 		file_put_contents($parser_file,$this->content);
 	}
 }

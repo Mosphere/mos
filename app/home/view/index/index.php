@@ -19,8 +19,8 @@
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="<?php echo ASSETS;?>images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Jane Doe</h1>
-							<p>Hyperspace Engineer</p>
+							<h1 id="title">{$name}</h1>
+							<p>IT</p>
 						</div>
 
 					<!-- Nav -->
@@ -42,6 +42,7 @@
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
 								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
 								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
+								<li><a href="#blog" id="blog-link" class="skel-layers-ignoreHref"><span class="icon fa-list">Blog</span></a></li>
 								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
 							</ul>
 						</nav>
@@ -167,7 +168,26 @@
 
 						</div>
 					</section>
+				<!-- Blog -->
+					<section id="blog" class="four">
+						<div class="container">
 
+							<header>
+								<h2>Blog</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="<?php echo ASSETS?>images/pic08.jpg" alt="" /></a>
+
+							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
+							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
+							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
+							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
+							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
+							ornare iaculis.</p>
+
+						</div>
+					</section>
+					
 				<!-- Contact -->
 					<section id="contact" class="four">
 						<div class="container">
@@ -180,7 +200,6 @@
 							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
 							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
 							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
-
 							<form method="post" action="#">
 								<div class="row">
 									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
@@ -196,7 +215,6 @@
 
 						</div>
 					</section>
-
 			</div>
 
 		<!-- Footer -->
@@ -204,7 +222,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; <a href="http://mosphere.cn">Mos</a>. All rights reserved.</li>
 					</ul>
 
 			</div>

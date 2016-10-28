@@ -123,7 +123,7 @@ class Model
 		}
 	}
 
-	public function select($fields,$wheres = [],$options = 'and')
+	public function select($fields,$conditions = [])
 	{
 		$field = '';
 		if (is_string($fields)) {
@@ -132,14 +132,37 @@ class Model
 			foreach ($fields as $key => $value) {
 				$field .= $value.",";
 			}
+			//去掉最后的一个逗号
 			$field = substr($field,0,strlen($field)-1);
 		}
-		$where = '';
-		foreach ($wheres as $key => $value) {
-			$where .= $key.' '.$options." '$value',";
+		if(empty($field)){
+			$field = '*';
 		}
-		$where = substr($where,0,strlen($where)-1);
-		$sql = 'SELECT '.$field.' FROM '.$this->table.' WHERE '.$where;
+		
+		$where = '';
+		$order = '';
+		$limit = '';
+		//where条件
+		if(!empty($conditions['where'])&&is_array($conditions['where'])){
+			foreach ($conditions['where'] as $key => $value) {
+				$where .= $key."='$value'".' AND ';
+			}
+			//去掉最后一个多余的AND
+			$where = ' WHERE '.substr($where,0,strlen($where)-4);
+		}
+		
+		//order by
+		if(!empty($conditions['order'])){
+			$order = ' ORDER BY '.$conditions['order'];
+		}
+		
+		//limit
+		if(!empty($conditions['limit'])){
+			$limit = ' LIMIT '.$conditions['limit'];
+		}
+		
+		$sql = 'SELECT '.$field.' FROM '.$this->table.$where.$order.$limit;
+		//var_dump($sql);exit;
 		$pdo = $this->db->query($sql);
 		if ($pdo) {
 			$result = $pdo->fetchAll(PDO::FETCH_ASSOC);
