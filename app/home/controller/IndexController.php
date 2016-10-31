@@ -2,7 +2,6 @@
 namespace home\controller;
 
 use core\Controller;
-use home\model\BlogModel;
 /**
 * index
 */
@@ -12,8 +11,8 @@ class IndexController extends Controller
 	public function index()
 	{
 		$name = 'mos';
-		$blog = new BlogModel();
-		$res = $blog->getBlogsByPage(1,2);
+		/* $blog = new BlogModel();
+		$res = $blog->getBlogsByPage(1,2); */
 		$this->assign('name',$name);
 		$this->display();
 	}

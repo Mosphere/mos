@@ -1,10 +1,10 @@
 <?php 
 
 return [
-	'db_host' 	=>	'127.0.0.1',
-	'db_user' 	=>	'root',
-	'db_pwd' 	=>	'',
-	'db_name' 	=>	'mos',
+	'db_host' 	=>	'my9815659.xincache1.cn',
+	'db_user' 	=>	'my9815659',
+	'db_pwd' 	=>	'china200851',
+	'db_name' 	=>	'my9815659',
 	'db_table_prefix' 	=>	'mos_',
 	'db_charset' 	=>	'utf8',
 

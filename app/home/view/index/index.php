@@ -19,7 +19,7 @@
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="<?php echo ASSETS;?>images/avatar.jpg" alt="" /></span>
-							<h1 id="title">{$name}</h1>
+							<h1 id="title"><?php echo $name;?></h1>
 							<p>IT</p>
 						</div>
 
