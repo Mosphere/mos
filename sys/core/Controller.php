@@ -15,14 +15,14 @@ class Controller
 
 	final protected function assign($name,$value = '')
 	{
-		/* if (is_array($value)) {
+		/* if (is_array($name)) {
 			$this->vars = array_merge($this->vars,$name);
 			return $this;
 		} else {
 			$this->vars[$name] = $value;
 		}  */
 		$this->vars[$name] = $value;
-		//var_dump($this->vars[$name]);exit;
+		
 	}
 
 	final public function setTpl($tpl='')

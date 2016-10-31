@@ -20,6 +20,7 @@ class View
 
 	public function display($pathFile)
 	{
+		extract($this->vars);
 		$tpl_file = Config::get('view_path').$pathFile.Config::get('view_suffix');
 		if (!file_exists($tpl_file)) {
 			exit('Template file does not exist');

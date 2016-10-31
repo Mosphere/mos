@@ -18,9 +18,11 @@ class Parser
 	private function parVar()
 	{
 		$patter = '/\{\$([\w]+)(\[\'([\w]*)\'\])*\}/';
+		//$patter='/\{\s*\$([a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)\s*\}/';
+		$patter = '/\{\$([\w]+)(\[\'([\w]*)\'\])*\}/';
 		$repVar = preg_match($patter,$this->content);
 		if ($repVar) {
-			$this->content = preg_replace($patter,"<?php echo \$this->vars['$1']$2; ?>",$this->content);
+			$this->content = preg_replace($patter,"<?php echo \$this->vars['$1']; ?>",$this->content);
 		}
 	}
 
